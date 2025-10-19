@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Research | Jongbin Won</title>
+
+<!-- ⬇ index.html과 같은 스타일을 그대로 둡니다 -->
+<style>
+:root { --bg:#0b0f17; --card:#121826; --text:#e6edf3; --muted:#9fb3c8; --accent:#7cc0ff; --line:#1e2636; }
+body.light { --bg:#f9fafc; --card:#fff; --text:#0e1626; --muted:#54606f; --accent:#215cff; --line:#e3e8ef; }
+html,body{margin:0;background:var(--bg);color:var(--text);font-family:'Inter',system-ui,sans-serif}
+.container{max-width:1100px;margin:0 auto;padding:0 20px}
+header{display:flex;justify-content:space-between;align-items:center;padding:18px 0;border-bottom:1px solid var(--line);position:sticky;top:0;background:var(--bg);z-index:10}
+nav a{color:var(--text);text-decoration:none;margin-left:24px;font-weight:600}
+nav a:hover{color:var(--accent)}
+#themeToggle{background:#0c2338;color:var(--text);border:1px solid var(--line);border-radius:12px;padding:6px 12px;font-weight:700;cursor:pointer}
+.hero{display:grid;grid-template-columns:1fr;gap:16px;padding:24px 0 20px}
+.tag{display:inline-block;font-size:.9rem;color:var(--accent);background:rgba(124,192,255,.08);padding:6px 12px;border-radius:8px}
+.section{border-top:1px solid var(--line);padding:0}
+.section>*{margin:0}
+.section>*:first-child{margin-top:20px}
+.section>*:last-child{margin-bottom:20px}
+.section>h2{margin-bottom:16px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:20px}
+.card h3{margin:0 0 10px}
+.meta{color:var(--muted);font-size:.95rem}
+figure{margin:0}
+figcaption{color:var(--muted);font-size:.85rem;margin-top:6px}
+a{color:var(--accent)}
+footer{border-top:1px solid var(--line);text-align:center;padding:20px;color:var(--muted);font-size:.9rem;margin-top:20px}
+</style>
+</head>
+<body>
+  <header class="container">
+    <div style="font-weight:700;">JONGBIN WON</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="research.html">Research</a>
+      <a href="publications.html">Publications</a>
+      <a href="contact.html">Contact</a>
+      <button id="themeToggle">🌙 Theme</button>
+    </nav>
+  </header>
+
+  <main class="container">
+    <!-- Hero -->
+    <section class="hero">
+      <span class="tag">Research & Projects</span>
+      <h1>Research Overview</h1>
+      <p class="meta">Smart sensing, AI-driven SHM, and visual/IoT platforms for structural monitoring.</p>
+    </section>
+
+    <!-- Themes (선택: 한눈에 보는 연구 주제 3칸) -->
+    <section class="section" id="themes">
+      <h2>Themes</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Wireless Smart Sensing</h3>
+          <p class="meta">Low-power devices, cloud pipelines, and real-time visualization.</p>
+        </div>
+        <div class="card">
+          <h3>AI for SHM</h3>
+          <p class="meta">Deep learning, anomaly detection, physics-informed modeling.</p>
+        </div>
+        <div class="card">
+          <h3>Visual Inspection</h3>
+          <p class="meta">Vision devices, pose estimation, adaptive platforms.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Project IUM -->
+    <section class="section" id="ium">
+      <h2>Project IUM</h2>
+      <div class="card">
+        <p>
+          <strong>Intelligent Understanding & Monitoring (IUM)</strong> — sensor networks for automated SHM;
+          “이음(연결)”에서 착안한 이름으로, 물리 거동과 디지털 해석을 연결하는 지능형 모니터링을 지향합니다. :contentReference[oaicite:1]{index=1}
+        </p>
+      </div>
+
+      <div class="grid" style="margin-top:16px">
+        <div class="card">
+          <h3>IUM-V</h3>
+          <p class="meta">Wireless smart sensor for vibration monitoring with cloud-based data management & visualization. :contentReference[oaicite:2]{index=2}</p>
+          <!-- 이미지가 있으면 assets/ium-v.jpg 로 교체 -->
+          <!-- <figure><img src="assets/ium-v.jpg" alt="IUM-V" style="width:100%;border-radius:10px"><figcaption>Prototype / field test</figcaption></figure> -->
+        </div>
+
+        <div class="card">
+          <h3>IUM-E</h3>
+          <p class="meta">Wireless sensor for crack detection in steel using current injection and measuring voltage drop. :contentReference[oaicite:3]{index=3}</p>
+          <!-- <figure><img src="assets/ium-e.jpg" alt="IUM-E" style="width:100%;border-radius:10px"><figcaption>Crack monitoring concept</figcaption></figure> -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Project VID -->
+    <section class="section" id="vid" style="scroll-margin-top:84px">
+      <h2>Project VID</h2>
+      <div class="card">
+        <p>
+          Visual Inspection Device (VID)와 적응형 플랫폼 개발로 자동 시각 점검을 목표로 합니다.
+          정밀 자세 추정을 위해 <strong>레이저 거리계 3대</strong>를 활용합니다. (성과: 상용 카메라·UAV 통합 가능한 휴대형 장치) :contentReference[oaicite:4]{index=4}
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © 2025 Jongbin Won — Research
+  </footer>
+
+<script>
+  // theme toggle (index와 동일)
+  const t=document.getElementById('themeToggle');
+  t.addEventListener('click',()=>{ document.body.classList.toggle('light'); t.textContent = document.body.classList.contains('light') ? '☀️ Theme' : '🌙 Theme'; });
+</script>
+</body>
+</html>
