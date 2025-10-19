@@ -67,7 +67,7 @@ nav a:hover {
   grid-template-columns: 1fr;
   gap: 24px;
   align-items: center;
-  padding: 20px 0;
+  padding: 20px 0 20px;
 }
 .tag {
   display: inline-block;
@@ -92,9 +92,14 @@ nav a:hover {
   grid-column: 1 / -1;
 }
 .section {
-  padding: 20px 0 0;
+  /* padding: 20px 0 0; */
+  padding: 0;
   border-top: 1px solid var(--line);
 }
+.section > * { margin: 0; }
+.section > *:first-child { margin-top: 20px; }
+.section > *:last-child  { margin-bottom: 20px; }
+.section > h2 { margin-bottom: 16px; }
 .news-list {
   display: flex;
   flex-direction: column;
@@ -134,8 +139,7 @@ a { color: var(--accent); }
   background: linear-gradient(135deg, #1a4c7a, #0f2f4d);
   border: 1px solid #154064;
 }
-.btn:hover { filter: brightness(1.1); }
-.section > h2 { margin-top: 0; }   /* ← 기본 위마진 제거 → 구분선과 정확히 20px */
+.btn:hover { filter: brightness(1.1);
   
 </style>
 </head>
