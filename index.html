@@ -67,7 +67,7 @@ nav a:hover {
   grid-template-columns: 1fr;
   gap: 24px;
   align-items: center;
-  padding: 20px 0 0;
+  padding: 20px 0;
 }
 .tag {
   display: inline-block;
@@ -135,6 +135,8 @@ a { color: var(--accent); }
   border: 1px solid #154064;
 }
 .btn:hover { filter: brightness(1.1); }
+.section > h2 { margin-top: 0; }   /* ← 기본 위마진 제거 → 구분선과 정확히 20px */
+  
 </style>
 </head>
 <body>
