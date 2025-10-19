@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Jongbin Won | Structural Health Monitoring</title>
+<style>
+:root {
+  --bg: #0b0f17;
+  --card: #121826;
+  --text: #e6edf3;
+  --muted: #9fb3c8;
+  --accent: #7cc0ff;
+  --line: #1e2636;
+}
+body.light {
+  --bg: #f9fafc;
+  --card: #ffffff;
+  --text: #0e1626;
+  --muted: #54606f;
+  --accent: #215cff;
+  --line: #e3e8ef;
+}
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Inter', system-ui, sans-serif;
+  margin: 0;
+  transition: background 0.3s, color 0.3s;
+}
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 0;
+  border-bottom: 1px solid var(--line);
+  position: sticky;
+  top: 0;
+  background: var(--bg);
+  z-index: 10;
+}
+nav a {
+  color: var(--text);
+  text-decoration: none;
+  margin-left: 24px;
+  font-weight: 600;
+}
+nav a:hover {
+  color: var(--accent);
+}
+#themeToggle {
+  background: #0c2338;
+  color: var(--text);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 6px 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.hero {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  align-items: center;
+  padding: 28px 0 32px;
+  border-bottom: 1px solid var(--line);
+}
+.tag {
+  display: inline-block;
+  font-size: 0.9rem;
+  color: var(--accent);
+  background: rgba(124,192,255,0.08);
+  padding: 6px 12px;
+  border-radius: 8px;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+  gap: 20px;
+}
+.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 20px;
+}
+.card.wide {
+  grid-column: 1 / -1;
+}
+.section {
+  padding: 40px 0;
+  border-top: 1px solid var(--line);
+}
+.news-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.news-item {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 16px 20px;
+}
+.news-date {
+  display: inline-block;
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin-bottom: 4px;
+}
+footer {
+  border-top: 1px solid var(--line);
+  text-align: center;
+  padding: 20px;
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin-top: 20px;
+}
+a { color: var(--accent); }
+.btn {
+  display: inline-block;
+  padding: 10px 14px;
+  font-weight: 700;
+  border-radius: 12px;
+  text-decoration: none;
+  border: 1px solid var(--line);
+  color: var(--text);
+}
+.btn.primary {
+  background: linear-gradient(135deg, #1a4c7a, #0f2f4d);
+  border: 1px solid #154064;
+}
+.btn:hover { filter: brightness(1.1); }
+</style>
+</head>
+<body>
+  <header class="container">
+    <div style="font-weight:700;">JONGBIN WON</div>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#research">Research</a>
+      <a href="#publications">Publications</a>
+      <a href="#contact">Contact</a>
+      <button id="themeToggle">🌙 Theme</button>
+    </nav>
+  </header>
+
+  <main class="container">
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+      <div>
+        <span class="tag">Structural • Sensing • AI • Monitoring</span>
+        <h1>Welcome to <em style="color:var(--accent);font-style:normal;">Jongbin Won’s</em> Lab</h1>
+        <p>Assistant Professor in Structural Engineering.  
+        Researching Smart Infrastructure, Structural Health Monitoring, and AI-driven Sensing.</p>
+
+        <div class="grid" style="margin-top:16px">
+          <div class="card">
+            <h3>Smart Sensing</h3>
+            <p>Design of IoT-based sensors and embedded systems for bridge and structure monitoring.</p>
+          </div>
+          <div class="card">
+            <h3>Data Analytics</h3>
+            <p>Signal processing, anomaly detection, and data fusion for digital twins.</p>
+          </div>
+          <div class="card">
+            <h3>AI & SHM</h3>
+            <p>Deep learning and physics-informed models for behavior prediction and damage detection.</p>
+          </div>
+          <div class="card wide">
+            <h3>At a glance</h3>
+            <p><strong>Position:</strong> Assistant Professor</p>
+            <p><strong>Affiliation:</strong> Department of Civil and Environmental Engineering</p>
+            <p><strong>Email:</strong> <a href="mailto:jongbin@domain.com">jongbin@domain.com</a></p>
+            <p><strong>Keywords:</strong> Structural Health Monitoring, Smart Sensors, AI, Digital Twin</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- News Section -->
+    <section class="section" id="news">
+      <h2 style="font-size:1.6rem;margin-bottom:16px;">Latest News</h2>
+      <div class="news-list">
+        <div class="news-item">
+          <span class="news-date">2025.09</span>
+          <p><strong>Publication:</strong> “AI-based bridge displacement estimation” accepted in *Automation in Construction*.</p>
+        </div>
+        <div class="news-item">
+          <span class="news-date">2025.06</span>
+          <p><strong>Conference:</strong> Presented “Real-time SHM system” at Smart Construction Symposium, Seoul.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Openings Section -->
+    <section class="section" id="openings">
+      <div class="news-item">
+        <span class="news-date">2025.10</span>
+        <p><strong>Openings:</strong> Recruiting graduate students (MS/PhD) and interns in Smart Structures & AI-based SHM.  
+        Interested? Send your CV to <a href="mailto:jongbin@domain.com">jongbin@domain.com</a>.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © 2025 Jongbin Won — Structural Health Monitoring & Smart Sensing Lab
+  </footer>
+
+<script>
+document.getElementById('themeToggle').addEventListener('click', () => {
+  document.body.classList.toggle('light');
+  const btn = document.getElementById('themeToggle');
+  btn.textContent = document.body.classList.contains('light') ? '☀️ Theme' : '🌙 Theme';
+});
+</script>
+</body>
+</html>
